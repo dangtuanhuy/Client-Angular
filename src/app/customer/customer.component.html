@@ -1,0 +1,32 @@
+<h1 class="text-center">All Customers</h1>
+<ngx-datatable class="material" [rows]="rows" [columnMode]="'force'" [headerHeight]="50" [footerHeight]="50"
+  [rowHeight]="50" [scrollbarV]="true" [sorts]="[{prop: 'ID', dir: 'desc'}]">
+  <ngx-datatable-column name="ID">
+    <ng-template let-row="row" ngx-datatable-cell-template>
+      <a [routerLink]="['/customers', row.id]" style="color:black"><span class="badge badge-dark">{{row.id}}</span></a>
+    </ng-template>
+  </ngx-datatable-column>
+  <ngx-datatable-column name="First Name">
+    <ng-template let-row="row" ngx-datatable-cell-template>
+      <a [routerLink]="['/customers', row.id]" style="color:black"><span
+          class="badge badge-dark">{{row.firstname}}</span></a>
+    </ng-template>
+  </ngx-datatable-column>
+  <ngx-datatable-column name="Last Name">
+    <ng-template let-row="row" ngx-datatable-cell-template>
+      <a [routerLink]="['/customers', row.id]" style="color:black"><span
+          class="badge badge-dark">{{row.lastname}}</span></a>
+    </ng-template>
+  </ngx-datatable-column>
+  <ngx-datatable-column name="Age">
+    <ng-template let-row="row" ngx-datatable-cell-template>
+      <a [routerLink]="['/customers', row.id]" style="color:black"><span class="badge badge-dark">{{row.age}}</span></a>
+    </ng-template>
+  </ngx-datatable-column>
+  <ngx-datatable-column name="CREATE">
+    <ng-template let-row="row" ngx-datatable-cell-template>
+      <a [routerLink]="['/customers', row.id]" style="color:black"><span
+          class="badge badge-dark">{{row.createdAt}}</span></a>
+    </ng-template>
+  </ngx-datatable-column>
+</ngx-datatable>
